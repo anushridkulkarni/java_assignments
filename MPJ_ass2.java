@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 class Employee {
 
     double salary;
@@ -12,7 +11,7 @@ class Employee {
     void displaySalary(double newSalary) {
         System.out.println("Salary Before Hike : " + salary);
         System.out.println("Salary After Hike  : " + newSalary);
-        System.out.println("---------------------------");
+        System.out.println("    ");
     }
 }
 
@@ -22,7 +21,6 @@ class FullTimeEmployee extends Employee {
         super(s);
     }
 
-    
     void calculateSalary() {
         double newSalary = salary + (salary * 0.50);
         System.out.println("Full Time Employee");
@@ -30,14 +28,12 @@ class FullTimeEmployee extends Employee {
     }
 }
 
-
 class InternEmployee extends Employee {
 
     InternEmployee(double s) {
         super(s);
     }
 
-  
     void calculateSalary() {
         double newSalary = salary + (salary * 0.25);
         System.out.println("Intern Employee");
@@ -45,7 +41,8 @@ class InternEmployee extends Employee {
     }
 }
 
-public class EmployeeDemo {
+public class Main {   // IMPORTANT: Main class must be named Main
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -56,9 +53,7 @@ public class EmployeeDemo {
         System.out.print("Enter number of Intern Employees: ");
         int iCount = Integer.parseInt(sc.nextLine());
 
-        
         for (int i = 0; i < fCount; i++) {
-
             System.out.print("\nEnter salary of Full Time Employee " + (i + 1) + ": ");
             double sal = Double.parseDouble(sc.nextLine());
 
@@ -66,9 +61,7 @@ public class EmployeeDemo {
             fte.calculateSalary();
         }
 
-       
         for (int i = 0; i < iCount; i++) {
-
             System.out.print("\nEnter salary of Intern Employee " + (i + 1) + ": ");
             double sal = Double.parseDouble(sc.nextLine());
 
